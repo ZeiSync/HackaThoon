@@ -1,0 +1,41 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+nav{
+	height: 70px;
+}
+
+.navigation{
+	width: 100%;		
+}
+
+#header{
+	height: 600px;
+	background-image: url("../img/bg.jpg");
+	background-position: center;
+}
+body{
+	background-color: #e9e9e9;
+}
+
+button.Log{
+	
+	width: 100px;
+}
+
+.searchbar{
+	margin-top: 200px;
+}
+.lable{
+	text-align: center;
+	text-shadow: 2px 2px #332c2b;
+	padding: 50px;
+	color: azure;
+}
+.content{
+	padding: 50px;
+}
+.footer{
+
+	background-color: #f8f9fa;
+}

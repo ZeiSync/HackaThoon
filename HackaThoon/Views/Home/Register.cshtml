@@ -1,0 +1,105 @@
+﻿
+@model HackaThoon.Models.Account
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="~/Register/images/icons/favicon.ico  />
+    <link rel="stylesheet" type="text/css" href="~/Register/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Register/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Register/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Register/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Register/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Register/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Register/css/main.css">
+
+
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 justify-content-center">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        <lable>Register</lable><br><br>
+                        <i style="font-size: 50px" class="fa fa-user-circle-o"></i>
+                    </span>
+                    <div style="text-align: center;">
+                        <label>Username</label>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="username is Required">
+                        <input class="input100" asp-for="AccountName" placeholder="Username">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                        <span asp-validation-for="AccountName"></span>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" asp-for="Email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <label>Password </label>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Valid password is required">
+                        <input class="input100" type="password" asp-for="Password" placeholder="Password" title=" must contain at least 1 letter and 1 upper case letter">
+
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                        <span asp-validation-for="Password"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" asp-controller="Account" asp-action="Register" formmethod="post" type="submit">
+                            <lable>Register</lable>
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-136">
+                        @* asp *@
+                        <a class="txt2" asp-controller="Home" asp-action="Login">
+                            <lable>Login</lable>
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Register/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/Register/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Register/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Register/vendor/select2/select2.min.js"></script>
+    <script src="~/Register/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <script src="~/Register/js/main.js"></script>
+
+</body>
+</html>
+@*pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"*@

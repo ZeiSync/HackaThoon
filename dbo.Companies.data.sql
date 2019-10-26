@@ -1,0 +1,3 @@
+﻿SET IDENTITY_INSERT [dbo].[Companies] ON
+INSERT INTO [dbo].[Companies] ([Id], [Name], [Wallpaper], [Avatar], [CompanyType], [Phone], [Address], [Email], [Website]) VALUES (1, N'Codegym', N'https://lh3.googleusercontent.com/dI7skLtvE0UXitQsAAzaRlAKhn0fyKRzJSEDIqQl_bfAE7ReXvBGpRa2ITvs-DhyQyzeKd8E=w1080-h608-p-no-v0', N'https://media.licdn.com/dms/image/C510BAQEdjKl11NB6-g/company-logo_200_200/0?e=2159024400&v=beta&t=HTJ7ThhTPP49GNoyoshe4XsU1COzD503vBNvM1NrDio', 1, N'0931996841', N'28 Nguyễn Tri Phương, Phường Phú Hội, Thừa Thiêm Huế, Huế', N'AnhKhanh@Codegym.com', N'https://codegym.vn/')
+SET IDENTITY_INSERT [dbo].[Companies] OFF

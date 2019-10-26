@@ -1,0 +1,78 @@
+﻿@model CompanyListViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="display-4 text-center">Create</h1>
+
+
+<form class="w-50 container" method="post">
+
+    <div class="form-group">
+        <label asp-for="Company.Name">Company Name</label>
+        <input asp-for="Company.Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Company.CompanyType">Group</label>
+        <select class="form-control" asp-for="Company.CompanyType" asp-items="Html.GetEnumSelectList<CompanyType>()"></select>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Company.Avatar">Avatar Url</label>
+        <input asp-for="Company.Avatar" class="form-control" />
+        <span asp-validation-for="Company.CompanyType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Company.Wallpaper">Wallpaper Url</label>
+        <input asp-for="Company.Wallpaper" class="form-control" />
+        <span asp-validation-for="Company.Wallpaper" class="text-danger"></span>
+    </div>
+    @*<div class="form-group">
+        <label asp-for="Company.Company_Languages">Company Language</label>
+    </div>*@
+
+    <div class="form-group">
+        <label asp-for="Company.Phone">Phone number</label>
+        <input asp-for="Company.Phone" class="form-control" />
+        <span asp-validation-for="Company.Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Company.Overview.Header">Title</label>
+        <input asp-for="Company.Overview.Header" class="form-control" />
+        <span asp-validation-for="Company.Overview.Header" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Company.Overview.Description">Content</label>
+        <textarea asp-for="Company.Overview.Description" class="form-control" cols="50" rows="5"></textarea>
+        <span class="text-danger" asp-validation-for="Company.Overview.Description"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Company.Email"></label>
+        <input asp-for="Company.Email" class="form-control" />
+        <span asp-validation-for="Company.Email" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Company.Address"></label>
+        <textarea asp-for="Company.Address" class="form-control" cols="50" rows="2"></textarea>
+        <span class="text-danger" asp-validation-for="Company.Address"></span>
+    </div>
+
+    <button type="submit" class="btn btn-dark text-light">Create</button>
+    <a class="btn btn-dark text-light ml-3" asp-controller="Companies" asp-action="Index">Cancle</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+
+

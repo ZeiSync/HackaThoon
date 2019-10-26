@@ -1,0 +1,199 @@
+﻿@model CompanyListViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+</head>
+<body>
+
+    @*<div class="">
+        <nav class=" navigation fixed-top navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="~/img/Logo.png" alt="" width="30px" height="30px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <form class="Log form-inline my-5 my-lg-3">
+                    <button class="Log btn btn-outline-danger my-2 my-sm-0" type="submit">
+                        Login
+                        <a href=""></a>
+                    </button>
+                    <button class="Log btn btn-outline-danger my-2 my-sm-0" type="submit">Register</button>
+                </form>
+            </div>
+        </nav>
+    </div>*@
+
+    <div class="header">
+        <div class="container">
+            <div class="row ">
+                <img class="CoverImg" src="@Model.Company.Wallpaper" alt="" width="100%" height="">
+            </div>
+        </div>
+    </div>
+
+    <div class="infoheader">
+        <div class="container shadow-sm p-3 mb-5 bg-white rounded border">
+            <div class="row">
+                <div class="col-sm-3 companylogo ">
+                    <img src="@Model.Company.Avatar" alt="..." class="rounded mx-auto d-block " width="200px" height="200px">
+                </div>
+                <div class="col-sm-9 content-company">
+                    <h3>Company Name</h3>
+                    <span>
+                        <p><i style="padding-right: 10px;" class="fa fa-map-marker"></i>Location: Khá Toang</p>
+                        
+                    </span>
+                    <span>
+                        <p><i style="padding-right: 10px;" class="far fa-keyboard"></i>@Model.Company.CompanyType</p>
+                    </span>
+                    <span>
+                        <p><i style="padding-right: 10px;" class="far fa-address-card"></i>Address: @Model.Company.Address</p>
+                    </span>
+                    <span>
+                        <p><i style="padding-right: 10px;" class="far fa-envelope-open"></i>Mail: @Model.Company.Email</p>
+                    </span>
+                    <span>
+                        <p><i style="padding-right: 10px;" class="fas fa-phone"></i>Phone: @Model.Company.Phone</p>
+                    </span>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="content ">
+        <div class="container  ">
+            <div class="row ">
+                <div class="col-md-8 Overview shadow-sm p-3 mb-5 bg-white rounded border">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item ">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h3 style="color: red">Overview</h3></a>
+                        </li>
+                    </ul>
+                    <div class="Overviewcontent">
+                        <div class="container">
+                            <h4>@Model.Company.Overview.Header</h4>
+                            <p  style="font-size: 18px">
+                                @Model.Company.Overview.Description
+                            </p>
+                            <div class="categories">
+                                <h4>Our Key Skills</h4>
+                                <button type="button" class="btn btn-outline-dark">Not Done Yet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 border shadow-sm p-3 mb-5 bg-white rounded rating">
+                    <div class="panel panel-default company-ratings">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Feature Reviews</h3>
+                        </div>
+                        <div class="panel-body disable-user-select">
+                            <div class="review featured">
+                                <a class="title" href="/companies/fossil-vietnam/review">''Môi trường thân thiện, nhiều người trẻ, nhiệt huyết và tài năng''</a>
+
+                                <div class="paragraph">
+                                    Tất cả các dịch vụ đi kèm đều cùng toà nhà (ăn trưa lầu 2 (tên nhà hàng rất lãng mạn- Honey Moon), Gym ở lầu 3, xung quanh cũng có nhiều quán ngon.
+                                    Công ty có nhiều kỹ sư trẻ, tài năng, hết mình trong công việc lẫn...ăn chơi
+                                    Văn hoá công ty mạnh...
+
+                                </div>
+                            </div>
+                            <div class="review featured">
+                                <hr>
+                                <a class="title" href="/companies/fossil-vietnam/review">''Môi trường tốt''</a>
+
+                                <div class="paragraph">
+                                    Được trang bị Macbook, Phúc lợi đầy đủ
+                                    Môi trường thân thiện học hỏi, đầu vào cao
+                                    Không OT. Nhưng mình thường xuyên ở lại công ty vì như ở nhà. Mọi thứ ok
+                                </div>
+                            </div>
+                            <div class="review featured">
+                                <hr>
+                                <a class="title" href="/companies/fossil-vietnam/review">''Công ty tốt cho các bạn Mid-level trở lên để phát triển''</a>
+
+                                <div class="paragraph">
+                                    Có phụ cấp ăn trưa, môi trường làm việc năng động và trẻ.
+                                    Phụ cấp và chế độ tốt về ăn uống và lương OT. Không bắt buộc
+                                </div>
+                            </div>
+
+                            <br>
+                            <a class="btn btn-outline-danger" rel="nofollow" data-add-review="true" data-toggle="modal" data-target="#sign-in-modal" href="">Add a review</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="location">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-8 border col-left shadow-sm p-3 mb-5 bg-white rounded">
+                    <h4 style="color: red">Location</h4>
+                    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+                        <script>
+                            (function () {
+                                var setting = { "height": 500, "width": 800, "zoom": 18, "queryString": "28 Nguyễn Tri Phương, Phú Nhuận, Thành phố Huế, Thua Thien Hue, Vietnam", "place_id": "ChIJR2NoADyhQTERmM965suMLjE", "satellite": false, "centerCoord": [16.46444435469324, 107.5919993], "cid": "0x312e8ccbe67acf98", "cityUrl": "/vietnam/thon-truong-giang-403656", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "103706" };
+                                var d = document;
+                                var s = d.createElement('script');
+                                s.src = 'https://1map.com/js/script-for-user.js?embed_id=103706';
+                                s.async = true;
+                                s.onload = function (e) {
+                                    window.OneMap.initMap(setting)
+                                };
+                                var to = d.getElementsByTagName('script')[0];
+                                to.parentNode.insertBefore(s, to);
+                            })();
+                        </script>
+                        <a href="https://1map.com/map-embed?embed_id=103706">1map.com</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

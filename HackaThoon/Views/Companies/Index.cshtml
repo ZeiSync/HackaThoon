@@ -1,0 +1,55 @@
+﻿@model CompanyListViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div id="header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 searchbar ">
+                <form class="card card-sm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto"><i class="fas fa-search h4 text-body"></i></div>
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" placeholder="Search"  asp-for="SearchKeyword">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-lg btn-danger">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="lable">
+                    <h4>SEARCH YOUR FAVORITE JOBS ! GOOD LUCK HAVE FUN !</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="content container">
+    <div class="row">
+        @foreach (var company in Model.Companies)
+        {
+            <div class="col-sm-4">
+                <a >
+                    <div class="card">
+                        <img class="card-img-top" src="@company.Avatar" alt="Avatar" width="auto" height="300 px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@company.Name</h5>
+                            <p class="card-text">@company.CompanyType</p>
+                            <a asp-action="Detail" asp-route-Id="@company.Id" class="btn btn-primary">Detail</a>
+                            @*<a asp-action="Edit" asp-route-Id="@company.Id" class="btn btn-primary">Edit</a>*@
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+
+        
+    </div>
+</div>
+<!--  -->
